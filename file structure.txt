@@ -1,0 +1,22 @@
+src/
+├── app/
+│   ├── api/
+│   │   └── contacts.ts                 # Server-side API functions
+│   │
+│   ├── contacts/
+│   │   ├── components/
+│   │   │   ├── ContactForm.tsx        # Client component for creating contacts
+│   │   │   └── ContactList.tsx        # Client component for displaying contacts
+│   │   │
+│   │   ├── [id]/
+│   │   │   ├── components/
+│   │   │   │   └── ContactDetail.tsx  # Client component for contact details
+│   │   │   ├── loading.tsx           # Loading state for contact detail
+│   │   │   ├── error.tsx            # Error state for contact detail
+│   │   │   └── page.tsx             # Server component for contact detail
+│   │   │
+│   │   ├── loading.tsx               # Loading state for contacts list
+│   │   ├── error.tsx                # Error state for contacts list
+│   │   └── page.tsx                 # Server component for contacts list
+│   │
+│   └── layout.tsx                    # Root layout (unchanged)
