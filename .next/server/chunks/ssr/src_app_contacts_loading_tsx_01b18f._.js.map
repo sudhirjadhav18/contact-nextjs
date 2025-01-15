@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/maga0721/Desktop/Handson%20Project/Next.js/contact-crud-app_SSR/src/app/contacts/loading.tsx"],"sourcesContent":["export default function Loading() {\r\n    return (\r\n      <div className=\"max-w-4xl mx-auto p-4\">\r\n        <div className=\"animate-pulse\">\r\n          <div className=\"h-8 bg-gray-200 rounded w-1/4 mb-4\"></div>\r\n          <div className=\"space-y-3\">\r\n            {[1, 2, 3].map((n) => (\r\n              <div key={n} className=\"h-20 bg-gray-200 rounded\"></div>\r\n            ))}\r\n          </div>\r\n        </div>\r\n      </div>\r\n    );\r\n  }"],"names":[],"mappings":";;;;;AAAe,SAAS;IACpB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAI,WAAU;;8BACb,8OAAC;oBAAI,WAAU;;;;;;8BACf,8OAAC;oBAAI,WAAU;8BACZ;wBAAC;wBAAG;wBAAG;qBAAE,CAAC,GAAG,CAAC,CAAC,kBACd,8OAAC;4BAAY,WAAU;2BAAb;;;;;;;;;;;;;;;;;;;;;AAMtB"}},
+    {"offset": {"line": 55, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
