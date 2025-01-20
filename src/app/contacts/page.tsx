@@ -6,7 +6,7 @@ export default async function ContactsPage() {
   const initialContacts = await getContacts();
   
   return (
-    <main className="max-w-4xl mx-auto p-4">
+    <main className="max-w-4xl mx-auto">
       <ContactList initialContacts={initialContacts} />
     </main>
   );

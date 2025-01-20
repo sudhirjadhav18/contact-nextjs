@@ -1,4 +1,5 @@
 "use client";
+import "./ContactList.css";
 
 import { useState } from "react";
 import { Contact } from "@/types/contact";
@@ -37,13 +38,15 @@ export default function ContactList({ initialContacts }: ContactListProps) {
   }
 
   return (
-    <div className="mt-6">
-      <button
-        className="text-blue-500 hover:text-blue-700 mr-4"
-        onClick={() => setSelectedContact({ isOpen: true })}
-      >
-        Add Contact
-      </button>
+    <div className="contact-list">
+      <div className="contact-list__header">
+        <button
+          className="text-blue-500 hover:text-blue-700 mr-4 contact-list__header-action-button"
+          onClick={() => setSelectedContact({ isOpen: true })}
+        >
+          + Add Contact
+        </button>
+      </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

@@ -1,0 +1,15 @@
+.contact-list__header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #6193FF;
+
+}
+
+.contact-list__header-action-button {
+  margin: 0;
+}

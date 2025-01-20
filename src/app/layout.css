@@ -1,0 +1,33 @@
+.layout-header {
+  display: flex;
+  align-items: center;
+  background-color: #ff66f9;
+  height: 60px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.layout-header__text {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-left: 55px;
+}
+
+.layout-header__logo {
+  margin-left: 25px;
+}
+
+.layout-header__profile {
+  margin-right: 25px;
+  margin-left: 80px;
+}
+
+.layout-header__search {
+  flex: 1;
+  margin-left: 80px;
+}
+
+.layout-header__search-input {
+  width: 100%;
+  max-width: 600px;
+}
