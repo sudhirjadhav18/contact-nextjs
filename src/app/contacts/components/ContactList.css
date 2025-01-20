@@ -13,3 +13,7 @@
 .contact-list__header-action-button {
   margin: 0;
 }
+
+.contact-list__action-button {
+  margin-left: 20px;
+}

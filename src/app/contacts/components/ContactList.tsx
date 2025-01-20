@@ -1,5 +1,8 @@
 "use client";
 import "./ContactList.css";
+import edit_icon from "@/app/assets/images/edit.svg";
+import delete_icon from "@/app/assets/images/delete.svg";
+import Image from "next/image";
 
 import { useState } from "react";
 import { Contact } from "@/types/contact";
@@ -64,7 +67,7 @@ export default function ContactList({ initialContacts }: ContactListProps) {
               <th scope="col" className="px-6 py-3">
                 Access
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-6 py-3 text-center">
                 Actions
               </th>
             </tr>
@@ -84,9 +87,9 @@ export default function ContactList({ initialContacts }: ContactListProps) {
                 <td className="px-6 py-4">{contact.phone}</td>
                 <td className="px-6 py-4">{contact.email}</td>
                 <td className="px-6 py-4"></td>
-                <td className="px-6 py-4 text-right">
+                <td className="px-6 py-4 text-center">
                   <button
-                    className="text-blue-500 hover:text-blue-700"
+                    className="text-blue-500 hover:text-blue-700 contact-list__action-button"
                     onClick={() =>
                       setSelectedContact({
                         isOpen: true,
@@ -94,13 +97,13 @@ export default function ContactList({ initialContacts }: ContactListProps) {
                       })
                     }
                   >
-                    Edit
+                    <Image src={edit_icon} alt="Edit" width={24} priority />
                   </button>
                   <button
-                    className="text-red-500 hover:text-red-700"
+                    className="text-red-500 hover:text-red-700 contact-list__action-button"
                     onClick={() => deleteContact(contact.id)}
                   >
-                    Delete
+                    <Image src={delete_icon} alt="Delete" width={24} priority />
                   </button>
                 </td>
               </tr>
