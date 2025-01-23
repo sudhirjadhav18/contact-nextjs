@@ -86,7 +86,12 @@ export default function ContactList({ initialContacts }: ContactListProps) {
                 </th>
                 <td className="px-6 py-4">{contact.phone}</td>
                 <td className="px-6 py-4">{contact.email}</td>
-                <td className="px-6 py-4"></td>
+                <td className="px-6 py-4">
+                  <label className="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" value="" className="sr-only peer" />
+                    <div className="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>                    
+                  </label>
+                </td>
                 <td className="px-6 py-4 text-center">
                   <button
                     className="text-blue-500 hover:text-blue-700 contact-list__action-button"
@@ -97,13 +102,13 @@ export default function ContactList({ initialContacts }: ContactListProps) {
                       })
                     }
                   >
-                    <Image src={edit_icon} alt="Edit" width={24} priority />
+                    <Image src={edit_icon} alt="Edit" width="24" priority />
                   </button>
                   <button
                     className="text-red-500 hover:text-red-700 contact-list__action-button"
                     onClick={() => deleteContact(contact.id)}
                   >
-                    <Image src={delete_icon} alt="Delete" width={24} priority />
+                    <Image src={delete_icon} alt="Delete" width="24" priority />
                   </button>
                 </td>
               </tr>
