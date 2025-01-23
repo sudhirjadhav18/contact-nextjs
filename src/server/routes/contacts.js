@@ -1,49 +1,61 @@
 import express from "express"; // Correct default import
 const router = express.Router();
 
-let contacts = [{
-  id: 1,
-  name: "John Doe",
-  phone: "1234567890",
-  email: "john.doe@example.com"
-},
-{
-  id: 2,
-  name: "Jane Smith",
-  phone: "0987654321",
-  email: "jane.smith@example.com"
-}]; // In-memory data store for demonstration purposes
+let contacts = [
+  {
+    id: 1,
+    name: "John Doe",
+    phone: "1234567890",
+    email: "john.doe@example.com",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    phone: "0987654321",
+    email: "jane.smith@example.com",
+  },
+]; // In-memory data store for demonstration purposes
 
 // Utility functions for contacts array
 const ContactsManager = {
-  getAll: () => contacts,
-  
+  getAll: () => {
+    console.log('contacts getAll: ', contacts);
+    return contacts;
+  },
+
   getById: (id) => contacts.find((c) => c.id === parseInt(id)),
-  
+
   create: (contactData) => {
-    const id = contacts.length + 1;
-    const newContact = { id, ...contactData };
+    const newContact = {
+      id: Math.max(...contacts.map((c) => c.id)) + 1,
+      ...contactData,
+    };
+    console.log(newContact);
     contacts.push(newContact);
+    console.log(contacts);
     return newContact;
   },
-  
+
   update: (id, updateData) => {
     const contact = contacts.find((c) => c.id === parseInt(id));
     if (!contact) return null;
     Object.assign(contact, updateData);
     return contact;
   },
-  
+
   delete: (id) => {
+    console.log('contactid to delete: ', id);
     const index = contacts.findIndex((c) => c.id === parseInt(id));
+    console.log('index to delete: ', index);
     if (index === -1) return false;
     contacts.splice(index, 1);
+    console.log('contacts after delete: ', contacts);
     return true;
   },
-  
+
   clear: () => {
     contacts = [];
-  }
+  },
 };
 
 // Create
